@@ -1,0 +1,548 @@
+@font-face {
+   font-family: Carnas;
+   src: url('css/Fonts/CarnasRegular.woff');
+}
+
+html, body{
+    height: 100%;
+    font-family: Carnas;
+}
+.header{
+    height :80px;
+}
+.banner{ 
+  background : #485DDC;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  box-shadow: 0px 2px 2px #888888;
+}
+.logo{
+    height : 75%;
+}
+.logo-txt {
+    padding-left:15px;
+}
+.kycimg{
+    height : 30%;
+}
+.login-menu {
+    padding-top: 10px;
+    padding-right: 15px;
+    color: #fff;    
+}
+.login-menu a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+.login-menu a:hover {
+    color: #fff;
+}
+.content{
+    margin-top : 2%;
+    height : 80%;
+    font-family: Carnas;
+}
+.landingpagearea{
+    width : 40%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    margin-left: 30%;
+    margin-right: 30%;
+    height : 50%;
+    
+}
+
+.landingpagearea .process{
+    width : 100%;
+}
+
+.landingpagearea #getstarted{
+    height : 40px;
+}
+
+.processflow{
+    margin: 0 auto;    
+    font-size : 0.8em;
+    width:85%;
+}
+
+.process-flow-menu {
+    width:18%;
+    float:left;
+}
+.process-flow-menu.last-menu {
+    width:25%;
+}
+.breadcrumb-divider {
+    float: left;
+    width: 4%;
+    margin: 10px 10px;
+}
+.process-flow-img {
+    float: left;
+    padding-right: 10px;
+}
+.process-flow-txt {
+    display: inline;
+    font-size: 14px;
+}
+.processcomplete{
+    margin-left: 30%;
+    margin-right: 30%;
+    width : 13%;
+    height : 6%;
+}
+.uploadfile{
+    margin: 0 35%;
+}
+.ddl-doctype-label {
+    padding-bottom: 10px;
+    margin-left:35px;
+    font-size: 18px;
+}
+#uploadtxt{
+    margin-left:15%;
+    margin-right:15%;
+}
+
+.uploadfile span{
+    font-size: 1.3em;
+    font-size: 1vw;
+}
+
+.uploadfile .identitydoc{
+    font-size: 1.1em;
+    font-size: 0.8vw;
+    width: 200px;
+    height: 40px;
+    
+}
+
+.uploadfile .uploadimg{
+   width: 80px;
+   height: 40px;  
+}
+
+#my_file {
+    display: none;
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  font-size : 1.1em;
+  font-size: .8vw;
+}
+
+.modal-body{
+    overflow:auto;
+    
+}
+.uploadoptions{
+    float:left;
+    margin-left : 15%;   
+}
+
+.modal-icon{
+    height : 75%;
+}
+
+.buttonimg{
+    cursor: pointer;
+}
+
+#customfileupload, #imgTest{
+    display:none;
+}
+
+#maincontent{
+    margin-left : 15%;
+    margin-right : 15%;
+    height : 60%;
+    font-family: Carnas;
+    width : 70%;
+}
+
+#maincontent table{
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+.height-percent-100 {
+    height:100%;
+}
+
+.ocr-data-section {
+    border: 1px solid #999;
+    height: 100%;
+    min-height: 500px;
+}
+.textheading{
+    font-size: 1em;
+}
+
+.actionbutton{
+    float:right;
+    margin:20px 0;
+    padding-right: 15px;
+    width: 100px;
+}
+
+.bordered td, .borderedimage td, .borderedpostocr td{
+    border : solid .5px;
+    border-color: #999;
+}
+
+/*.borderedimage{
+    height : 75%;    
+}*/
+
+.borderedpostocr{
+    height : 85%;    
+}
+
+.bordered{
+    height : 15%;  
+}
+#userinfoheader, #userinfotext{
+    font-family: Carnas;
+}
+
+#userinfo{
+    width : 70%; 
+    margin-left : 15%;
+    margin-right : 15%;
+    height : 80%;
+}
+
+#userinfotext{
+    font-size : .8vw;
+}
+
+#userinfoheader{
+    font-size : 1vw;
+}
+
+ .userinfodivisions label{
+    font-size : .6vw;
+}
+
+ .userinfodivisions{
+     
+     border: 2px solid #999;     
+     padding :10px;
+     color: #999;
+     border-radius: 1%;
+ }
+
+ .userinfotable td{
+     padding : 3%;
+
+ }
+
+.userinfotable td input{
+    font-size: 0.8vw;
+    width: 100%;
+    height: 100%;
+
+}
+
+.usercontent{
+    height : 80%;
+    overflow-y : scroll;
+}
+
+.titlebox{
+	float:left;
+	padding:0 5px;
+	margin:-25px 0 0 20px;
+    
+    background:#fff;
+    font-size : .9vw;
+    color: black;
+	
+}
+
+#loginBkgrd{
+
+    height : 100%;
+    width : 100%;
+    background-image:   url('images/LoginBkgrd.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+
+#loginsegment{
+    margin-left: 25%;
+    margin-right: 25%;
+    width : 50%;
+    height : 100%;
+    padding-top : 12%;
+    padding-bottom : 12%;
+    background-blend-mode: color-dodge;
+    float:left;
+}
+
+#loginsegment #loginimage{
+    width : 35%;
+    float:left;
+    height : 90%;    
+}
+
+#loginsegment .logininfo{
+    
+    font-family: Carnas;
+    font-size : .8vw;
+    padding-left : 5%;
+    width : 60%;
+    background: white;
+    float:left;
+    height : 90%;
+    color: #999;
+}
+
+#loginsegment input{
+    font-size: .8vw;
+    padding: 10px;
+    border: none;
+    border-bottom: solid 1px #999;
+    transition: border 0.3s;
+    width : 60%;
+    height : 10%;
+
+}
+
+#loginsegment input.focus{
+    border: none;
+    border-bottom: solid 2px black;
+}
+
+#loginLogo{
+    width : 30%;
+    height :  13%;
+}
+
+.btn{
+    background-color : #4FC182;
+    color : #fff;
+} 
+.btn-success {
+    background-color : #4FC182;
+}
+.ocr-data-section {
+    padding: 15px 25px;
+    overflow-y: auto;
+}
+.ocr-image-section {
+    padding: 15px 25px;
+    border: 1px solid #999;
+    min-height: 400px;
+    margin: 0 auto;
+    width: 100%;
+}
+.ocr-data {
+    padding: 8px 0;    
+}
+.ocr-data-label {
+    font-size: 11px;
+    display: block;
+    margin: 0;
+    font-weight: normal;
+    color: #999;
+}
+
+.ocr-data-txt {
+    font-size: 16px;
+    display: block;
+    text-transform: uppercase;
+}
+
+#nextbtn{
+    height: 40px;
+    width:100%;
+}
+
+#loginBtn{
+    width : 25%;
+    height : 12%;    
+}
+
+#processimgbtn #ocrprocessbtn {
+    width : 100%;
+    height : 105%;
+    background-color : #4FC182;
+    color : #fff;
+    border : none;   
+    font-size : .8vw;
+}
+
+#landingpagetxt {
+    color: white;
+    font-family: Carnas;
+    font-size: 1vw;
+    font-weight: 100;
+}
+
+#landingimg{
+    width : 3%;
+    height : 3%;
+}
+
+#headerline{
+    width : 65%;
+}
+
+ul.ocr-image-ctrls-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #999;
+}
+
+.ocr-image-ctrls-list li {
+    float: left;
+    border-right:1px solid #999;
+    height: 70px;
+}
+
+.ocr-image-ctrls-list li a {
+    display: block;
+    text-align: center;
+    padding: 16px 0;
+    text-decoration: none;    
+}
+
+.ocr-image-ctrls-list li:first-child {
+    border-left:1px solid #999;
+}
+
+.ocr-image-ctrls-list li:last-child {
+    padding-left:0;
+    padding-right:0;         
+}
+
+.ocr-image-ctrls-list .btn-adj {
+    padding-left:8px;     
+}
+.clearfix {
+    clear:both;
+}
+.contentRight {
+    float:right;
+}
+.contentLeft{
+    float:left;
+}
+h3 {
+    margin-bottom: 1.2em;
+}
+h4 {
+    margin-bottom: 1em;
+}
+.user-info-form {
+    padding: 1em 0;
+    height: 470px;
+    margin: 1.5em 0px;
+}
+.scrollbar {
+    overflow-y: scroll;
+}
+.scrollbar::-webkit-scrollbar {
+    width: 8px;
+    background-color:#EAEAEA;    
+}
+.scrollbar::-webkit-scrollbar-thumb{
+    background-color:#999;
+    border-radius:10px;
+}
+.scrollbar::-webkit-scrollbar-thumb:hover{
+    background-color:#999;
+}
+.scrollbar::-webkit-scrollbar-thumb:active{
+    background-color:#999;
+} 
+.form-legend {
+    padding: 1em 0.5em;
+}
+.form-legend fieldset {
+    border: 1px solid #ccc;
+    padding: .35em .625em .75em;
+    margin: 0 2px;
+    border-radius: 5px;
+}
+.form-legend legend {
+    width: auto;
+    border: 0;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    font-size: 1.2em;
+}
+.form-row {
+    padding: 10px 0;
+}
+.form-row label {
+    display: block;
+    margin: 0 0 0.5em 0;
+    color: #aaa;
+    font-size: 0.9em;
+    font-weight: 100;
+}
+.form-row input {
+    margin: 0 0 0.5em 0;
+    border:none;
+    padding: 10px 10px;
+    color: #333;
+    font-size: 1.2em;
+    width: 100%;
+}
+.app-sidenav {
+    min-width: 75px;
+    background: url('../../images/side_bg_pic.png');
+    background-repeat: repeat-y;
+}
+.side-menu {
+       display: inline;
+       margin:0;
+       padding: 0;
+}
+.side-menu li {
+    display: block;
+    height: 120px;
+    padding: 40px 10px;
+    border-bottom: 1px solid #666;
+}
+.side-menu li a {
+    font-size: 0.9em;
+    color: #aaa;
+    text-decoration: none;
+}
+.side-menu li a:active {
+    color:#4FC182;
+    text-decoration: none;
+}
+.side-menu li a:hover {
+    color:#4FC182;
+    text-decoration: none;
+}

@@ -1,0 +1,212 @@
+<section class="header-section">
+	<div class="header">
+		<div class="banner">
+			<div class="main-logo-content contentLeft">
+				<span class="logo-symbol">
+					<img class="logo" src="images/Logo.png" width="42" height="42"/>
+				</span>
+				<span class="logo-txt">
+					<img class="kycimg" src="images/KYC.png"  />
+				</span>
+			</div>
+			<div class="login-menu contentRight">
+				John Smith
+			</div>
+		</div>
+	</div>
+</section>
+<!--button class="app-icon-button" (click)="sidenav.toggle()">Menu</button-->
+<md-sidenav-layout class="left-navigation">
+	<md-sidenav #start mode="side" opened="true" class="app-sidenav">
+		<ul class="side-menu">
+			<li>
+				<a href="">
+					<img src=""/><br/>Leads
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src=""/><br/>History
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src=""/><br/>Settings
+				</a>
+			</li>
+		</ul>
+	</md-sidenav>
+	<section class="main-content-section md-sidenav-content" id="admin-list">
+		<section class="side-nav">
+		</section>
+		<div class="container">
+			<div class="list-header">
+				<div class="left-side-header col-xs-4 contentLeft">
+					<h3><b>Leads</b></h3>
+					<div class="paging-content contentLeft">
+						<span>Showing </span> 10 out of 200
+					</div>
+					<div class="search-filter-section contentRight">
+						<span class="search-list-text"><img src="images/icon_search.png"/></span>
+						<span class="filter-list"><img src="images/icon_filter.png"/></span>
+					</div>
+				</div>
+				<div class="right-side-header col-xs-8">
+					<a routerLink="/" routerLinkActive="active">
+						<button class="btn">Add New Leads</button>
+					</a>
+				</div>
+			</div>
+			<div class="clearfix">
+				<div class="col-xs-4 user-list">
+					<div class="user-list-content scrollbar">
+						<ul class="user-list-list">
+							<li class="user-list-style clearfix" *ngFor="let collectionData of userData">
+								<a href="#">
+									<div class="user-badge circleBase"><span>{{collectionData.firstname | slice:0:1}}{{collectionData.lastname | slice:0:1}}</span></div>
+									<div class="user-details"><span>{{collectionData.firstname}} {{collectionData.lastname}}</span><br/>Pan # {{collectionData.panno}}</div>
+									<div class="user-timestamp">{{collectionData.modifiedtime}}<br/>{{collectionData.modifieddate}}</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-8  user-list-details">
+					<div class="user-title-section clearfix">
+						<div class="user-title-content contentLeft">
+							<div class="user-kyc-info">
+								<div>Membership #</div>
+								<h3>KYC 1763KJ12HE</h3>
+								<div class="user-kyc-timestamp">
+									<span class="user-kyc-clock"><img src="images/icon_clock.png"/> 10:38</span>
+									<span class="user-kyc-calendar"><img src="images/calendar_icon.png"/> 26/10/2016</span>
+								</div>
+							</div>
+						</div>
+						<div class="contentRight">
+							<img src="images/Edit_icon.png" />
+						</div>
+					</div>
+					<div class="user-info-details clearfix">
+						<div class="user-info-content scrollbar">
+							<div class="user-info-row clearfix">
+								<div class="col-xs-4">
+									<label for="first_name">First Name</label>
+									<span class="ocr-data-txt">John</span>
+								</div>
+								<div class="col-xs-4">
+									<label for="middle_name">Middle Name</label>
+									<span class="ocr-data-txt">William</span>
+								</div>
+								<div class="col-xs-4">
+									<label for="last_name">Last Name</label>
+									<span class="ocr-data-txt">Smith</span>
+								</div>
+							</div>
+							<div class="user-info-row clearfix">
+								<div class="col-xs-6">
+									<label for="fathers_name">Father's Name</label>
+									<span class="ocr-data-txt">William K. Smith</span>
+								</div>
+								<div class="col-xs-6">
+									<label for="mother_name">Mother's Name</label>
+									<span class="ocr-data-txt">Marry W. Smith</span>
+								</div>
+							</div>
+							<div class="user-info-row clearfix">
+								<div class="col-xs-6">
+									<label for="dob">Date of Birth</label>
+									<span class="ocr-data-txt">22/12/1989</span>
+								</div>
+								<div class="col-xs-6">
+									<label for="pan_no">Permanent Account Number</label>
+									<span class="ocr-data-txt">ABCDE1234F</span>
+								</div>
+							</div>
+							<div class="user-info-row clearfix">
+								<div class="col-xs-12">
+									<label for="address_line">Address Line</label>
+									<span class="ocr-data-txt">Ashwini classic, 601 6th Floor, NIBM, Kondhwa, Pune - 411048</span>
+								</div>
+							</div>
+							<div class="user-info-row clearfix">
+								<div class="col-xs-6">
+									<label for="new_passportno">New Passport Number</label>
+									<span class="ocr-data-txt">L2354786</span>
+								</div>
+								<div class="col-xs-6">
+									<label for="old_passportno">Old Passport Number</label>
+									<span class="ocr-data-txt">P3217756</span>
+								</div>
+							</div>
+							<div class="user-info-row clearfix">
+								<div class="col-xs-6">
+									<label for="date_of_issue">Date of Issue</label>
+									<span class="ocr-data-txt">22/02/2008</span>
+								</div>
+								<div class="col-xs-6">
+									<label for="place_of_issue">Place of Issue</label>
+									<span class="ocr-data-txt">Mumbai</span>
+								</div>
+							</div>
+							<div class="user-info-row clearfix">
+								<div class="col-xs-12">
+									<label for="employer_name">Employer's' Name</label>
+									<span class="ocr-data-txt">I2 Technologies India Private Limited</span>
+								</div>
+							</div>
+							<div class="user-info-row clearfix">
+								<div class="col-xs-6">
+									<label for="location">Location</label>
+									<span class="ocr-data-txt">Bangalore</span>
+								</div>
+								<div class="col-xs-6">
+									<label for="payslip_month">Payslip for the month of</label>
+									<span class="ocr-data-txt">October 2016</span>
+								</div>
+							</div>
+							<div class="user-info-row clearfix">
+								<div class="col-xs-6">
+									<label for="employee_code">Employee Code</label>
+									<span class="ocr-data-txt">23456</span>
+								</div>
+								<div class="col-xs-6">
+									<label for="total_earnings">Total Earnings</label>
+									<span class="ocr-data-txt">Rs. 46,956.00</span>
+								</div>
+							</div>
+							<div class="user-info-row clearfix">
+								<div class="col-xs-6">
+									<label for="total_dedcution">Total Deduction</label>
+									<span class="ocr-data-txt">Rs. 5,083.00</span>
+								</div>
+								<div class="col-xs-6">
+									<label for="net_pay">Net Pay</label>
+									<span class="ocr-data-txt">Rs. 41,873.00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="admin-rights-btn clearfix">
+						<div class="attachment-list contentLeft">
+							<a href="#" class="attachment-link">
+								<img src="images/icon_attachment.png" />Pan Card
+							</a>
+							<a href="#" class="attachment-link">
+								<img src="images/icon_attachment.png" />Passport
+							</a>
+						</div>
+						<div class="admin-btns contentRight">
+							<a href="#" class="ctrl-btn reject-btn contentLeft">
+								<span><img src=""/></span><br/>Reject
+							</a>
+							<a href="#" class=" ctrl-btn approve-btn  contentLeft">
+								<span><img src=""/></span><br/>Approve
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</md-sidenav-layout>

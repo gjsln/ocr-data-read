@@ -1,0 +1,188 @@
+<section class="header-section">
+	<div class="header">
+		<div class="banner">
+			<div class="main-logo-content contentLeft">
+				<span class="logo-symbol">
+					<img class="logo" src="images/Logo.png" width="42" height="42"/>
+				</span>
+				<span class="logo-txt">
+					<img class="kycimg" src="images/KYC.png"  />
+				</span>
+			</div>
+			<div class="login-menu contentRight">
+				<a routerLink="/loginpage" routerLinkActive="active">Admin Login</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="main-content-section">
+	<div class="content">
+		<div id="maincontent">
+			<div class="processflow">
+				<div class="process-flow-menu">
+					<span class="process-flow-img"><img class="processflowimg" src="images/UploadIdentityProof.png"/></span>
+					<span class="process-flow-txt"><b>Upload Identity Proof</b></span>
+				</div>
+				<div class="breadcrumb-divider">
+					<span><img class="arrow" src="images/Arrow.png"/></span>
+				</div>
+				<div class="process-flow-menu">
+					<span class="process-flow-img"><img class="processflowimg" src="images/UploadAddressProof.png"/></span>
+					<span class="process-flow-txt"><b>Upload  Address Proof</b></span>
+				</div>
+				<div class="breadcrumb-divider">
+					<span><img class="arrow" src="images/Arrow.png"/></span>
+				</div>
+				<div class="process-flow-menu">
+					<span class="process-flow-img"><img class="processflowimg" src="images/UploadSalarySlip.png"/></span>
+					<span class="process-flow-txt"><b>Upload Salary Slip</b></span>
+				</div>
+				<div class="breadcrumb-divider">
+					<span><img class="arrow" src="images/Arrow.png"/></span>
+				</div>
+				<div class="process-flow-menu last-menu">
+					<span class="process-flow-img"><img class="processflowimg" src="images/Verify&SubmitData.png"/></span>
+					<span class="process-flow-txt"><b>Verify &amp; Submit Informations</b></span>
+					<!--img class="processcomplete" src="images/ProcessComplete.png"/-->
+				</div>
+			</div>
+			<div class="clearfix">
+				<hr/>
+			</div>
+			<div class="user-details-section">
+				<div class="user-info-title">
+					<h3><b>Application</b> | Bank Name - Interest Checking &amp; Regular Savings</h3>
+				</div>
+				<div class="user-details-subtitle">
+					<h4><b>How we identify you</b></h4>
+				</div>
+				<div class="user-details-txt">
+					<p>
+						Bank of America, like all financial institutions, is required by law to obtain, verify and record information that identifies
+						each customer that opens an account with us.When you open an account with us, we will ask you for your name, address
+						and other information that will allow us to identify you.
+					</p>
+				</div>
+				<div class="user-info-form scrollbar">
+					<div class="user-personal-info form-legend">
+						<fieldset>
+							<legend>Personal Information</legend>
+							<div class="form-row clearfix">
+								<div class="col-xs-4">
+									<label for="first_name">First Name *</label>
+									<input type="text" name="first_name" placeholder="First Name" disabled="disabled"/>
+								</div>
+								<div class="col-xs-4">
+									<label for="middle_name">Middle Name *</label>
+									<input type="text" name="middle_name" placeholder="Middle Name" disabled="disabled"/>
+								</div>
+								<div class="col-xs-4">
+									<label for="last_name">Last Name *</label>
+									<input type="text" name="last_name" placeholder="Last Name" disabled="disabled"/>
+								</div>
+							</div>
+							<div class="form-row clearfix">
+								<div class="col-xs-6">
+									<label for="fathers_name">Father's Name *</label>
+									<input type="text" name="fathers_name" placeholder="Father's' Name" disabled="disabled"/>
+								</div>
+								<div class="col-xs-6">
+									<label for="mother_name">Mother's Name *</label>
+									<input type="text" name="mothers_name" placeholder="Mother's' Name" disabled="disabled"/>
+								</div>
+							</div>
+							<div class="form-row clearfix">
+								<div class="col-xs-6">
+									<label for="dob">Date of Birth *</label>
+									<input type="text" name="dob" placeholder="Date of Birth" disabled="disabled"/>
+								</div>
+								<div class="col-xs-6">
+									<label for="pan_no">Permanent Account Number *</label>
+									<input type="text" name="pan_no" placeholder="PAN No" disabled="disabled"/>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<div class="user-contact-details form-legend">
+						<fieldset>
+							<legend>Contact Details</legend>
+							<div class="form-row clearfix">
+								<div class="col-xs-12">
+									<label for="address_line">Address Line *</label>
+									<input type="text" name="address_line" placeholder="Address Line" disabled="disabled"/>
+								</div>
+							</div>
+							<div class="form-row clearfix">
+								<div class="col-xs-4">
+									<label for="city">City *</label>
+									<input type="text" name="City" placeholder="City" disabled="disabled"/>
+								</div>
+								<div class="col-xs-4">
+									<label for="state_name">State *</label>
+									<input type="text" name="state_name" placeholder="State" disabled="disabled"/>
+								</div>
+								<div class="col-xs-4">
+									<label for="zip_code">Zip *</label>
+									<input type="text" name="zip_code" placeholder="Zip" disabled="disabled"/>
+								</div>
+							</div>
+							<div class="form-row clearfix">
+								<div class="col-xs-6">
+									<label for="emailid">Email Address *</label>
+									<input type="text" name="emailid" placeholder="Email Address" disabled="disabled"/>
+								</div>
+								<div class="col-xs-6">
+									<label for="mobile_no">Mobile Number *</label>
+									<input type="text" name="mobile_no" placeholder="Mobile No" disabled="disabled"/>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<div class="user-employer-details form-legend">
+						<fieldset>
+							<legend>Employer Details</legend>
+							<div class="form-row clearfix">
+								<div class="col-xs-12">
+									<label for="employer_name">Employer's' Name *</label>
+									<input type="text" name="employer_name" placeholder="Employer's Name" disabled="disabled"/>
+								</div>
+							</div>
+							<div class="form-row clearfix">
+								<div class="col-xs-4">
+									<label for="location">Location *</label>
+									<input type="text" name="location" placeholder="Location" disabled="disabled"/>
+								</div>
+								<div class="col-xs-4">
+									<label for="employee_code">Employee Code *</label>
+									<input type="text" name="employee_code" placeholder="Employee Code" disabled="disabled"/>
+								</div>
+								<div class="col-xs-4">
+									<label for="payslip_month">Payslip for the month of *</label>
+									<input type="text" name="payslip_month" placeholder="Payslip Month" disabled="disabled"/>
+								</div>
+							</div>
+							<div class="form-row clearfix">
+								<div class="col-xs-4">
+									<label for="total_earnings">Total Earnings *</label>
+									<input type="text" name="total_earnings" placeholder="Total Earnings" disabled="disabled"/>
+								</div>
+								<div class="col-xs-4">
+									<label for="total_dedcution">Total Deduction *</label>
+									<input type="text" name="total_dedcution" placeholder="Total Deduction" disabled="disabled"/>
+								</div>
+								<div class="col-xs-4">
+									<label for="net_pay">Net Pay *</label>
+									<input type="text" name="net_pay" placeholder="Net Pay" disabled="disabled"/>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+			<div class="actionbutton">
+				<a routerLink="/userinfo" routerLinkActive="active"><button id="nextbtn" class="btn" >Submit</button></a>
+			</div>
+		</div>
+	</div>
+</section>

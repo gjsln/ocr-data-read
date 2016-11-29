@@ -1,0 +1,163 @@
+#admin-list{
+    .container {
+        width: 100%;
+        padding: 0;
+        margin-top: 1em;
+        color: #aaa;
+        .list-header {
+            padding: 0.5em;
+            .left-side-header {
+                padding-left:5px;
+                h3 {
+                    margin:0 0 0.5em 0;
+                    color: #333;
+                }
+                .paging-content {
+                    padding-bottom: 0.8em;
+                }
+                .search-list-text {
+                    padding-right: 1em;
+                }
+            }
+            .right-side-header {
+                text-align: right;
+            }
+        }
+        .btn {
+            height: 40px;
+        }
+        .user-list {
+            border-top:1px solid #eee;
+            border-right:1px solid #eee;
+            padding: 0;
+            height: auto;
+            padding-right: 5px;
+            padding-top: 5px;
+            .user-list-content {
+                overflow-y:scroll;
+                height: 780px;
+            }
+            .user-list-list {
+                margin: 0;
+                padding: 0;
+                padding-left: 1em;
+                .user-list-style {
+                    display: block;
+                    border-bottom: 1px solid #eee;
+                    width: 100%;
+                    a {
+                        float: left; 
+                        text-decoration: none;
+                        width: 100%;
+                        padding: 0.8em 0;
+                        color:#aaa;                        
+                   }
+                    a:hover {
+                        background-color:#eaeaea;
+                        color: #333;
+                        .user-badge {
+                            background-color:#333;
+                            color:#fff;
+                            border: 0;
+                        }
+                    }
+                    .user-badge {
+                        width: 50px;
+                        height: 50px;
+                        border: 2px solid #aaa;
+                        text-align:center;
+                        float: left;
+                        span {
+                            font-size: 1.2em;
+                            font-weight: 500;
+                            position: relative;
+                            top: 0.7em;
+                        }
+                    }
+                    .user-details {
+                        float: left;
+                        margin-left: 1em;                        
+                        span {
+                            font-size: 1.2em;
+                            color: #333;
+                            padding-top:2px;
+                        }
+                    }
+                    .user-timestamp {
+                        font-size:1em;
+                        float: right;
+                        padding-top:5px;
+                        padding-right: 10px;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        .user-list-details {
+            border-top:1px solid #eee;
+            padding: 0;
+            .user-title-section {
+                padding: 0.8em 1.5em;
+                border-bottom: 1px solid #eee;
+                .user-kyc-info {
+                    h3 {
+                        color: #485DDC;
+                        margin: 0.2em 0;
+                    }
+                    .user-kyc-calendar img{
+                        padding-left: 0.8em;
+                        padding-right: 0.3em;
+                    }
+                }
+            }
+            .user-info-details {
+                padding: 0.8em;
+                border-bottom: 1px solid #eaeaea;
+                .user-info-content {
+                    overflow-y: scroll;
+                    height: 600px;
+                }
+                .user-info-row {
+                    padding: 0.5em 0;
+                    label {
+                        font-weight: 500;
+                        font-size: 0.9em;
+                    }
+                    .ocr-data-txt {
+                        color: #333;
+                    }
+                }
+            }
+            .admin-rights-btn {
+                height: 76px;
+                .attachment-list {
+                    padding: 1.5em;
+                    a.attachment-link {
+                        padding-left: 10px;
+                        text-decoration: underline;
+                        font-size: 0.9em;
+                    }
+                }
+                .ctrl-btn {
+                    width:76px;
+                    height: 76px;
+                    background-color: #ccc;
+                    padding-left: 20px;
+                    padding-top: 10px;
+                    color: #fff;
+                    font-size: 12px;
+                }
+                .approve-btn  {
+                    background-color: #4FC182;
+                }
+                .reject-btn  {
+                    background-color: #EC5353;
+                }
+            }
+        }
+    }
+}
+.circleBase {
+    border-radius: 50%;
+    /*behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}

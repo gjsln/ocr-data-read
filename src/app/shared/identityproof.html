@@ -1,0 +1,187 @@
+<section class="header-section">
+	<div class="header">
+		<div class="banner">
+			<div class="main-logo-content contentLeft">
+				<span class="logo-symbol">
+					<img class="logo" src="images/Logo.png" width="42" height="42"/>
+				</span>
+				<span class="logo-txt">
+					<img class="kycimg" src="images/KYC.png"  />
+				</span>
+			</div>
+			<div class="login-menu contentRight">
+				<a routerLink="/loginpage" routerLinkActive="active">Admin Login</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="main-content-section">
+	<div class="content">
+		<div id="maincontent">
+			<div class="processflow">
+				<div class="process-flow-menu">
+					<span class="process-flow-img"><img class="processflowimg" src="images/UploadIdentityProof.png"/></span>
+					<span class="process-flow-txt"><b>Upload Identity Proof</b></span>
+				</div>
+				<div class="breadcrumb-divider">
+					<span><img class="arrow" src="images/Arrow.png"/></span>
+				</div>
+				<div class="process-flow-menu">
+					<span class="process-flow-img"><img class="processflowimg" src="images/UploadAddressProof.png"/></span>
+					<span class="process-flow-txt"><b>Upload  Address Proof</b></span>
+				</div>
+				<div class="breadcrumb-divider">
+					<span><img class="arrow" src="images/Arrow.png"/></span>
+				</div>
+				<div class="process-flow-menu">
+					<span class="process-flow-img"><img class="processflowimg" src="images/UploadSalarySlip.png"/></span>
+					<span class="process-flow-txt"><b>Upload Salary Slip</b></span>
+				</div>
+				<div class="breadcrumb-divider">
+					<span><img class="arrow" src="images/Arrow.png"/></span>
+				</div>
+				<div class="process-flow-menu last-menu">
+					<span class="process-flow-img"><img class="processflowimg" src="images/Verify&SubmitData.png"/></span>
+					<span class="process-flow-txt"><b>Verify &amp; Submit Informations</b></span>
+					<!--img class="processcomplete" src="images/ProcessComplete.png"/-->
+				</div>
+			</div>
+			<div class="clearfix">
+				<hr/>
+			</div>
+			<div class="uploadfile clearfix">
+				<div class="ddl-doctype-label">
+					Upload <b>Identity Proof</b> as
+				</div>
+				<div class="ddl-doc-type">
+					<select class="identitydoc">
+						<option value="PAN">Pan Card</option>
+						<option value="Passport">Passport</option>
+					</select>
+					<span>
+					<button class="uploadimg buttonimg btn" data-toggle="modal" data-target="#myModal">Browse</button>
+				</span>
+					<div><input type="file" id="my_file"></div>
+				</div>
+
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">To upload, import an image from</h4>
+							</div>
+							<div class="modal-body">
+								<input type="file" id="my_file" onchange="imageToBase64()">
+								<div class="uploadoptions"><img class="modal-icon buttonimg" id="get_file" onclick="clickFileInput()" src="images/LocalStorage.png" /><br/><br/>Local
+									Storage
+								</div>
+								<div class="uploadoptions"><img class="modal-icon" src="images/Scanner.png" /><br/><br/> &nbsp;&nbsp;Scanner</div>
+								<div class="uploadoptions"><img class="modal-icon" src="images/CloudStorage.png" /><br/><br/> Cloud Storage</div>
+
+							</div>
+							<div id="imgTest"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="data-img-process">
+				<div class="height-percent-100 col-md-8">
+					<div class="ocr-data-title">
+						<h2 class="textheading">IMAGE PROCESS</h2>
+					</div>
+					<div class="ocr-image-section">
+						<div class="ocr-image-container" id="ocr-image-content">
+
+							<canvas id="canvas"></canvas>
+
+							<div class="boundary-pts contentLeft">
+								<div id="0" class="draggable topleft"></div>
+								<div id="1" class="draggable bottomleft"></div>
+							</div>
+							<div class="boundary-pts contentLeft">
+								<div id="0r" class="draggable topright"></div>
+								<div id="1r" class="draggable bottomright"></div>
+							</div>
+							<div><img id="ocrimage" src="images/Desert.jpg" height="300px" width="500px" /></div>
+						</div>
+					</div>
+					<div class="ocr-image-ctrls">
+						<ul class="ocr-image-ctrls-list">
+							<li class="actions col-md-2 col-sm-2">
+								<a>
+									<img src="images/Delete.png" />
+								</a>
+							</li>
+							<li class="actions col-md-2 col-sm-2">
+								<a onclick="undo()">
+									<img src="images/Undo.png" />
+								</a>
+							</li>
+							<li class="actions col-md-2 col-sm-2">
+								<a onclick="rotateLeft()">
+									<img src="images/RotateLeft.png" />
+								</a>
+							</li>
+							<li class="actions col-md-2 col-sm-2">
+								<a onclick="rotateRight()">
+									<img src="images/RotateRight.png" />
+								</a>
+							</li>
+							<li class="actions btn-adj col-md-2 col-sm-2">
+								<a>
+									<img src="images/DoneAdjustment.png" />
+								</a>
+							</li>
+							<li id="processimgbtn" class="actions col-md-2 col-sm-2">
+								<button id="ocrprocessbtn" (click)="getIdentityInfo()">OCR PROCESS</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="postocrdatatable" class="height-percent-100 col-md-4">
+					<div class="ocr-data-title">
+						<h2 class="textheading">POST OCR PROCESS</h2>
+					</div>
+					<div class="ocr-data-section">
+						<div *ngIf="lName">
+							<div class="ocr-data">
+								<label class="ocr-data-label">First Name</label>
+								<span class="ocr-data-txt">{{fName}}</span>
+							</div>
+							<div class="ocr-data">
+								<label class="ocr-data-label">Middle Name</label>
+								<span class="ocr-data-txt">{{mName}}</span>
+							</div>
+							<div class="ocr-data">
+								<label class="ocr-data-label">Last Name</label>
+								<span class="ocr-data-txt">{{lName}}</span>
+							</div>
+							<div class="ocr-data">
+								<label class="ocr-data-label">Father's Name</label>
+								<span class="ocr-data-txt">{{fatherName}}</span>
+							</div>
+							<div class="ocr-data">
+								<label class="ocr-data-label">Date of Birth</label>
+								<span class="ocr-data-txt">{{dob}}</span>
+							</div>
+							<div class="ocr-data">
+								<label class="ocr-data-label">Permanent Account Number</label>
+								<span class="ocr-data-txt">{{panNo}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="actionbutton clearfix">
+				<a routerLink="/address" routerLinkActive="active">
+					<button id="nextbtn" class="btn">Next</button>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

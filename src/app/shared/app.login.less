@@ -1,0 +1,65 @@
+#adminLoginPage {
+    &.container {
+        font-family: Carnas;
+        background: url("images/loginPage_bg.jpg");
+        width:100%;
+        height: 100%;
+        .login-box-section{
+                position:fixed;
+                top:36%;
+                left:36%;
+                width:50%;
+                min-height:16em;
+                margin-top: -9em; /*set to a negative number 1/2 of your height*/
+                margin-left: -15em; /*set to a negative number 1/2 of your width*/
+                .back-btn {
+                    margin-bottom: 1em;
+                    .back-btn-img {
+                        padding-right: 0.6em;
+                        float: left;
+                        padding-top: 2px;
+                    }
+                    .back-btn-txt {
+                        color: #fff;
+                        font-size: 1.4em;
+                        font-weight: 500;
+                    }
+                }
+        }
+        .login-box-content {
+            width: 100%;
+           .login-placeholder-img {
+                background-color: #fff;
+            }
+            .login-controls {
+                background-color: #fff;
+                min-height: 466px;
+                padding: 3em 2em;
+                .kyc-image, 
+                .login-ctrls-txt {
+                    margin-bottom: 2em;
+                    .forms-control {
+                        font-size: 1.1em;
+                        padding: 10px;
+                        border: none;
+                        border-bottom: solid 1px #999;
+                        transition: border 0.3s;
+                        width : 60%;
+                        height : 10%;
+                    }
+                }
+                .forgot-link-login {
+                    padding-left: 2em;
+                }                
+            }
+        }
+    }
+}
+.no-padding{
+    padding: 0;
+}
+.btn {
+    padding: 0.8em;
+    min-width:7em;
+    font-size: 1.2em;
+}
