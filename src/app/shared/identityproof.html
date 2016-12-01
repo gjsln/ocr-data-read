@@ -27,28 +27,29 @@
 				<div class="breadcrumb-divider">
 					<span><img class="arrow" src="images/Arrow.png"/></span>
 				</div>
-				<div class="process-flow-menu">
+				<div class="process-flow-menu gray-scale">
 					<span class="process-flow-img"><img class="processflowimg" src="images/UploadAddressProof.png"/></span>
 					<span class="process-flow-txt"><b>Upload  Address Proof</b></span>
 				</div>
 				<div class="breadcrumb-divider">
 					<span><img class="arrow" src="images/Arrow.png"/></span>
 				</div>
-				<div class="process-flow-menu">
+				<div class="process-flow-menu gray-scale">
 					<span class="process-flow-img"><img class="processflowimg" src="images/UploadSalarySlip.png"/></span>
 					<span class="process-flow-txt"><b>Upload Salary Slip</b></span>
 				</div>
 				<div class="breadcrumb-divider">
 					<span><img class="arrow" src="images/Arrow.png"/></span>
 				</div>
-				<div class="process-flow-menu last-menu">
+				<div class="process-flow-menu gray-scale last-menu">
 					<span class="process-flow-img"><img class="processflowimg" src="images/Verify&SubmitData.png"/></span>
 					<span class="process-flow-txt"><b>Verify &amp; Submit Informations</b></span>
-					<!--img class="processcomplete" src="images/ProcessComplete.png"/-->
 				</div>
 			</div>
-			
-			<div class="clearfix"><hr/></div>
+
+			<div class="clearfix">
+				<hr/>
+			</div>
 
 			<div class="uploadfile clearfix">
 				<div class="ddl-doctype-label">
@@ -58,12 +59,13 @@
 					<select class="identitydoc">
 						<option value="PAN">Pan Card</option>
 						<option value="Passport">Passport</option>
+						<option value="Previous Month">Previous Month</option>
 					</select>
 					<span>
 						<button class="uploadimg buttonimg btn" (click)="modal.open()">Browse</button>
 					</span>
 					<div>
-						<input type="file" (change)="fileChange(input)" id="my_file" #input/>
+						<input type="file" (change)="fileChange($event)" id="my_file"/>
 					</div>
 				</div>
 				<!-- Modal -->
@@ -82,7 +84,7 @@
 				</modal>
 			</div>
 
-			<div *ngIf="file_srcs.length > 0">
+			<div *ngIf="imageFile"> 
 				<div class="data-img-process">
 					<div class="height-percent-100 col-md-8">
 						<div class="ocr-data-title">
@@ -101,7 +103,7 @@
 									<div id="0r" class="draggable topright"></div>
 									<div id="1r" class="draggable bottomright"></div>
 								</div>
-								<div><img id="ocrimage" [attr.src]='file_srcs' height="300px" width="500px" /></div>
+								<div><img id="ocrimage" src="" height="300px" width="500px" /></div>
 							</div>
 						</div>
 						<div class="ocr-image-ctrls">

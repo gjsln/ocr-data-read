@@ -23,6 +23,7 @@
 				<div class="process-flow-menu">
 					<span class="process-flow-img"><img class="processflowimg" src="images/UploadIdentityProof.png"/></span>
 					<span class="process-flow-txt"><b>Upload Identity Proof</b></span>
+					<span class="process-status"><img src="images/ProcessComplete.png"/></span>
 				</div>
 				<div class="breadcrumb-divider">
 					<span><img class="arrow" src="images/Arrow.png"/></span>
@@ -30,6 +31,7 @@
 				<div class="process-flow-menu">
 					<span class="process-flow-img"><img class="processflowimg" src="images/UploadAddressProof.png"/></span>
 					<span class="process-flow-txt"><b>Upload  Address Proof</b></span>
+					<span class="process-status"><img src="images/ProcessComplete.png"/></span>
 				</div>
 				<div class="breadcrumb-divider">
 					<span><img class="arrow" src="images/Arrow.png"/></span>
@@ -37,6 +39,7 @@
 				<div class="process-flow-menu">
 					<span class="process-flow-img"><img class="processflowimg" src="images/UploadSalarySlip.png"/></span>
 					<span class="process-flow-txt"><b>Upload Salary Slip</b></span>
+					<span class="process-status"><img src="images/ProcessComplete.png"/></span>
 				</div>
 				<div class="breadcrumb-divider">
 					<span><img class="arrow" src="images/Arrow.png"/></span>
@@ -71,35 +74,35 @@
 							<div class="form-row clearfix">
 								<div class="col-xs-4">
 									<label for="first_name">First Name *</label>
-									<input type="text" name="first_name" placeholder="First Name" disabled="disabled"/>
+									<input type="text" name="first_name" [value]="fName" placeholder="First Name" disabled="disabled"/>
 								</div>
 								<div class="col-xs-4">
 									<label for="middle_name">Middle Name *</label>
-									<input type="text" name="middle_name" placeholder="Middle Name" disabled="disabled"/>
+									<input type="text" name="middle_name" [value]="mName"  placeholder="Middle Name" disabled="disabled"/>
 								</div>
 								<div class="col-xs-4">
 									<label for="last_name">Last Name *</label>
-									<input type="text" name="last_name" placeholder="Last Name" disabled="disabled"/>
+									<input type="text" name="last_name" [value]="lName" placeholder="Last Name" disabled="disabled"/>
 								</div>
 							</div>
 							<div class="form-row clearfix">
 								<div class="col-xs-6">
 									<label for="fathers_name">Father's Name *</label>
-									<input type="text" name="fathers_name" placeholder="Father's' Name" disabled="disabled"/>
+									<input type="text" name="fathers_name" [value] = "fatherName" placeholder="Father's' Name" disabled="disabled"/>
 								</div>
 								<div class="col-xs-6">
 									<label for="mother_name">Mother's Name *</label>
-									<input type="text" name="mothers_name" placeholder="Mother's' Name" disabled="disabled"/>
+									<input type="text" name="mothers_name" [value] = "motherName" placeholder="Mother's' Name" disabled="disabled"/>
 								</div>
 							</div>
 							<div class="form-row clearfix">
 								<div class="col-xs-6">
 									<label for="dob">Date of Birth *</label>
-									<input type="text" name="dob" placeholder="Date of Birth" disabled="disabled"/>
+									<input type="text" name="dob" [value] = "dob" placeholder="Date of Birth" disabled="disabled"/>
 								</div>
 								<div class="col-xs-6">
 									<label for="pan_no">Permanent Account Number *</label>
-									<input type="text" name="pan_no" placeholder="PAN No" disabled="disabled"/>
+									<input type="text" name="pan_no" [value] = "panNo" placeholder="PAN No" disabled="disabled"/>
 								</div>
 							</div>
 						</fieldset>
@@ -110,31 +113,31 @@
 							<div class="form-row clearfix">
 								<div class="col-xs-12">
 									<label for="address_line">Address Line *</label>
-									<input type="text" name="address_line" placeholder="Address Line" disabled="disabled"/>
+									<input type="text" name="address_line" [value] = "address"  placeholder="Address Line" disabled="disabled"/>
 								</div>
 							</div>
 							<div class="form-row clearfix">
 								<div class="col-xs-4">
 									<label for="city">City *</label>
-									<input type="text" name="City" placeholder="City" disabled="disabled"/>
+									<input type="text" name="City" [value] = "city" placeholder="City" disabled="disabled"/>
 								</div>
 								<div class="col-xs-4">
 									<label for="state_name">State *</label>
-									<input type="text" name="state_name" placeholder="State" disabled="disabled"/>
+									<input type="text" name="state_name" [value] = "state" placeholder="State" disabled="disabled"/>
 								</div>
 								<div class="col-xs-4">
 									<label for="zip_code">Zip *</label>
-									<input type="text" name="zip_code" placeholder="Zip" disabled="disabled"/>
+									<input type="text" name="zip_code" [value] = "zip" placeholder="Zip" disabled="disabled"/>
 								</div>
 							</div>
 							<div class="form-row clearfix">
 								<div class="col-xs-6">
 									<label for="emailid">Email Address *</label>
-									<input type="text" name="emailid" placeholder="Email Address" disabled="disabled"/>
+									<input type="text" name="emailid" [value] = "emailid" placeholder="Email Address" disabled="disabled"/>
 								</div>
 								<div class="col-xs-6">
 									<label for="mobile_no">Mobile Number *</label>
-									<input type="text" name="mobile_no" placeholder="Mobile No" disabled="disabled"/>
+									<input type="text" name="mobile_no" [value] = "mobile" placeholder="Mobile No" disabled="disabled"/>
 								</div>
 							</div>
 						</fieldset>
@@ -145,35 +148,35 @@
 							<div class="form-row clearfix">
 								<div class="col-xs-12">
 									<label for="employer_name">Employer's' Name *</label>
-									<input type="text" name="employer_name" placeholder="Employer's Name" disabled="disabled"/>
+									<input type="text" name="employer_name" [value] = "employerName" placeholder="Employer's Name" disabled="disabled"/>
 								</div>
 							</div>
 							<div class="form-row clearfix">
 								<div class="col-xs-4">
 									<label for="location">Location *</label>
-									<input type="text" name="location" placeholder="Location" disabled="disabled"/>
+									<input type="text" name="location" [value] = "location" placeholder="Location" disabled="disabled"/>
 								</div>
 								<div class="col-xs-4">
 									<label for="employee_code">Employee Code *</label>
-									<input type="text" name="employee_code" placeholder="Employee Code" disabled="disabled"/>
+									<input type="text" name="employee_code" [value] = "employeeCode" placeholder="Employee Code" disabled="disabled"/>
 								</div>
 								<div class="col-xs-4">
 									<label for="payslip_month">Payslip for the month of *</label>
-									<input type="text" name="payslip_month" placeholder="Payslip Month" disabled="disabled"/>
+									<input type="text" name="payslip_month" [value] = "payslipMonth" placeholder="Payslip Month" disabled="disabled"/>
 								</div>
 							</div>
 							<div class="form-row clearfix">
 								<div class="col-xs-4">
 									<label for="total_earnings">Total Earnings *</label>
-									<input type="text" name="total_earnings" placeholder="Total Earnings" disabled="disabled"/>
+									<input type="text" name="total_earnings" [value] = "totalEarnings" placeholder="Total Earnings" disabled="disabled"/>
 								</div>
 								<div class="col-xs-4">
 									<label for="total_dedcution">Total Deduction *</label>
-									<input type="text" name="total_dedcution" placeholder="Total Deduction" disabled="disabled"/>
+									<input type="text" name="total_dedcution" [value] = "totalDeductions" placeholder="Total Deduction" disabled="disabled"/>
 								</div>
 								<div class="col-xs-4">
 									<label for="net_pay">Net Pay *</label>
-									<input type="text" name="net_pay" placeholder="Net Pay" disabled="disabled"/>
+									<input type="text" name="net_pay" [value] = "netPay" placeholder="Net Pay" disabled="disabled"/>
 								</div>
 							</div>
 						</fieldset>

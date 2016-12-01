@@ -89,13 +89,19 @@ html, body{
     font-size : 0.8em;
     width:85%;
 }
-
+.gray-scale {
+    opacity: 0.2;
+}
 .process-flow-menu {
     width:18%;
     float:left;
 }
 .process-flow-menu.last-menu {
     width:25%;
+}
+.process-status {
+    display: block;
+    text-align: center;
 }
 .breadcrumb-divider {
     float: left;

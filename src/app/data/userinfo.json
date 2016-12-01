@@ -1,0 +1,22 @@
+{
+    "fname": "John",
+    "mname": "William",
+    "lname": "Smith",
+    "fathername": "William K Smith",
+    "dob": "22/12/1989",
+    "panno": "ABCDE1234F",
+    "mothername": "Mary K Smith",
+    "address": "Ashwini Classic, 601 6th floor, NIBM, Kondhwa",
+    "city": "Pune",
+    "state": "Maharastra, India",
+    "zip": "411048",
+    "mobile": "+91 9000000000",
+    "emailid": "johnw.smith@domain.com",
+    "employername": "I2 Technologies India Private Limited",
+    "location": "Bangalore",
+    "payslipmonth": "January 2016",
+    "empcode": "23456",
+    "totalearnings": "46,956.00",
+    "totaldeductions": "5,083.00",
+    "netpay": "41,873.00"
+}

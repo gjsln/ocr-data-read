@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { OCRDataService } from './app.ocrDataservices';
 import { ModalComponent } from 'ng2-bs3-modal/ng2-bs3-modal';
 
@@ -12,42 +12,22 @@ export class IdentityComponent {
 	@ViewChild('myModal')
 	modal: ModalComponent;
 
-	public file_srcs: string[] = [];
+	constructor(private _OCRDataService: OCRDataService) { }
 
-	constructor(private _OCRDataService: OCRDataService, private changeDetectorRef: ChangeDetectorRef) { }
+	//file_srcs: string;
+	imageFile: boolean;
 
-	// This is called when the user selects new files from the upload button
-	fileChange(input) {
-		this.readFiles(input.files);
-	}
-
-	readFile(file, reader, callback) {
-		// Set a callback funtion to fire after the file is fully loaded
-		reader.onload = () => {
-			// callback with the results
-			callback(reader.result);
-		}
-
-		// Read the file
-		reader.readAsDataURL(file);
-	}
-
-	readFiles(files) {
-		// Create the file reader
-		let reader = new FileReader();
-
-		// If there is a file
-		if (files) {
+	public fileChange(fileInput: any) {
+		if (fileInput.target.files && fileInput.target.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e: any) {
+				//this.file_srcs = e.target.result;
+				$('#ocrimage').attr('src', e.target.result);
+				//console.log("Base 64 Data: ", (e.target.result.replace(/^data:image\/(png|jpg);base64,/, '')));
+			}
+			reader.readAsDataURL(fileInput.target.files[0]);
 			this.modal.close();
-			// Start reading this file
-			this.readFile(files[0], reader, (result) => {
-				// After the callback fires do:
-				this.file_srcs.push(result);
-				console.log("Base 64 Data: ", (result.replace(/^data:image\/(png|jpg);base64,/, '')));
-			});
-		} else {
-			// When all files are done This forces a change detection
-			this.changeDetectorRef.detectChanges();
+			this.imageFile = true;
 		}
 	}
 

@@ -1,60 +1,6 @@
 function clickFileInput() {
     document.getElementById('my_file').click();
 }
-/*
-$('input[type=file]').change(function (e) {
-
-    imageToBase64(document.getElementById('my_file').files);
-});
-
-function imageToBase64(filesSelected) {
-
-    if (filesSelected.length > 0) {
-        var fileToLoad = filesSelected[0];
-
-        var fileReader = new FileReader();
-
-        fileReader.onload = function (fileLoadedEvent) {
-            var srcData = fileLoadedEvent.target.result; // <--- data: base64
-
-            var newImage = document.createElement('img');
-            newImage.src = srcData;
-
-            document.getElementById("imgTest").innerHTML = newImage.outerHTML;
-
-            console.log("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
-        }
-        fileReader.readAsDataURL(fileToLoad);
-
-        setTimeout(function () {
-            base64ToArrayBuffer(document.getElementById("imgTest").innerHTML);
-        }, 1000);
-    }
-}
-
-function base64ToArrayBuffer(base64) {
-
-    var binary_string = window.atob(base64);
-
-    var len = binary_string.length;
-
-    var bytes = new Uint8Array(len);
-    for (var i = 0; i < len; i++) {
-        bytes[i] = binary_string.charCodeAt(i);
-    }
-
-    return bytes.buffer;
-}
-
-function arrayBufferToBase64(buffer) {
-    var binary = '';
-    var bytes = new Uint8Array(buffer);
-    var len = bytes.byteLength;
-    for (var i = 0; i < len; i++) {
-        binary += String.fromCharCode(bytes[i]);
-    }
-    return window.btoa(binary);
-}*/
 
 function rotateLeft() {
 
