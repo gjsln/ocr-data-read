@@ -47,9 +47,9 @@
 					<!--img class="processcomplete" src="images/ProcessComplete.png"/-->
 				</div>
 			</div>
-			<div class="clearfix">
-				<hr/>
-			</div>
+			
+			<div class="clearfix"><hr/></div>
+
 			<div class="uploadfile clearfix">
 				<div class="ddl-doctype-label">
 					Upload <b>Identity Proof</b> as
@@ -59,36 +59,29 @@
 						<option value="PAN">Pan Card</option>
 						<option value="Passport">Passport</option>
 					</select>
-					<span><button class="uploadimg buttonimg btn" data-toggle="modal" data-target="#myModal">Browse</button></span>
+					<span>
+						<button class="uploadimg buttonimg btn" (click)="modal.open()">Browse</button>
+					</span>
 					<div>
 						<input type="file" (change)="fileChange(input)" id="my_file" #input/>
 					</div>
 				</div>
-
 				<!-- Modal -->
-				<div class="modal fade" id="myModal" role="dialog">
-					<div class="modal-dialog">
-
-						<!-- Modal content-->
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<h4 class="modal-title">To upload, import an image from</h4>
-							</div>
-							<div class="modal-body">
-								<input type="file" id="my_file">
-								<div class="uploadoptions"><img class="modal-icon buttonimg" id="get_file" onclick="clickFileInput()" src="images/LocalStorage.png" /><br/><br/>Local
-									Storage
-								</div>
-								<div class="uploadoptions"><img class="modal-icon" src="images/Scanner.png" /><br/><br/> &nbsp;&nbsp;Scanner</div>
-								<div class="uploadoptions"><img class="modal-icon" src="images/CloudStorage.png" /><br/><br/> Cloud Storage</div>
-
-							</div>
-							<div id="imgTest"></div>
+				<modal #myModal>
+					<modal-header [show-close]="true">
+						<h4 class="modal-title">To upload, import an image from</h4>
+					</modal-header>
+					<modal-body>
+						<input type="file" id="my_file">
+						<div class="uploadoptions"><img class="modal-icon buttonimg" id="get_file" onclick="clickFileInput()" src="images/LocalStorage.png" />
+							<br/><br/>Local Storage
 						</div>
-					</div>
-				</div>
+						<div class="uploadoptions"><img class="modal-icon" src="images/Scanner.png" /><br/><br/> &nbsp;&nbsp;Scanner</div>
+						<div class="uploadoptions"><img class="modal-icon" src="images/CloudStorage.png" /><br/><br/> Cloud Storage</div>
+					</modal-body>
+				</modal>
 			</div>
+
 			<div *ngIf="file_srcs.length > 0">
 				<div class="data-img-process">
 					<div class="height-percent-100 col-md-8">

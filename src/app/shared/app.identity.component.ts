@@ -1,13 +1,16 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, ViewChild } from '@angular/core';
 import { OCRDataService } from './app.ocrDataservices';
+import { ModalComponent } from 'ng2-bs3-modal/ng2-bs3-modal';
 
 @Component({
 	selector: 'identity',
-	providers: [OCRDataService],
 	templateUrl: './identityproof.html',
-	styleUrls: ['app.imagecrop.less']
+	styleUrls: ['app.imagecrop.less'],
+	providers: [OCRDataService]
 })
 export class IdentityComponent {
+	@ViewChild('myModal')
+	modal: ModalComponent;
 
 	public file_srcs: string[] = [];
 
@@ -35,6 +38,7 @@ export class IdentityComponent {
 
 		// If there is a file
 		if (files) {
+			this.modal.close();
 			// Start reading this file
 			this.readFile(files[0], reader, (result) => {
 				// After the callback fires do:
