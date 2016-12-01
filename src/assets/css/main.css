@@ -8,7 +8,7 @@ html, body{
     font-family: Carnas;
 }
 .header{
-    height :80px;
+    height :70px;
 }
 .banner{ 
   background : #485DDC;
@@ -40,26 +40,48 @@ html, body{
     color: #fff;
 }
 .content{
-    margin-top : 2%;
+    /*margin-top : 2%;
     height : 80%;
+    font-family: Carnas;*/
     font-family: Carnas;
+    width: 1028px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 25px;
 }
-.landingpagearea{
-    width : 40%;
-    margin-top: 15%;
-    margin-bottom: 15%;
-    margin-left: 30%;
-    margin-right: 30%;
-    height : 50%;
-    
+.landing-page-container {
+    margin: 8% auto;
+    text-align: center;
+    width: 1028px;   
 }
-
-.landingpagearea .process{
-    width : 100%;
+.landing-page-head,
+.kyc-landing-progress {
+    margin-bottom:8%;    
 }
-
-.landingpagearea #getstarted{
-    height : 40px;
+.landing-page-text {
+    font-size: 1.2em;
+    color: #333;
+}
+.landing-page-text span {
+    font-size: 1.6em;
+    color: #485DDC;
+}
+.kyc-start-btn .getstarted{
+    height : 50px;
+    width:200px;
+    font-size: 1.2em;
+}
+.divider-arrow {
+    margin-top:25px;    
+}
+.image-caption {
+    text-align: center;
+    margin-top:20px;
+}
+.image-caption span {
+    display: block;
+    font-size: 1.4em;
 }
 
 .processflow{
@@ -95,7 +117,9 @@ html, body{
     height : 6%;
 }
 .uploadfile{
-    margin: 0 35%;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
 }
 .ddl-doctype-label {
     padding-bottom: 10px;
@@ -114,10 +138,8 @@ html, body{
 
 .uploadfile .identitydoc{
     font-size: 1.1em;
-    font-size: 0.8vw;
     width: 200px;
     height: 40px;
-    
 }
 
 .uploadfile .uploadimg{
@@ -172,11 +194,13 @@ html, body{
 }
 
 #maincontent{
-    margin-left : 15%;
+    /*margin-left : 15%;
     margin-right : 15%;
     height : 60%;
+    width : 70%;*/    
     font-family: Carnas;
-    width : 70%;
+    width: 100%;
+    text-align: left;
 }
 
 #maincontent table{
@@ -188,11 +212,13 @@ html, body{
 .height-percent-100 {
     height:100%;
 }
-
 .ocr-data-section {
     border: 1px solid #999;
     height: 100%;
     min-height: 500px;
+}
+.data-img-process {
+    margin-top: 25px;
 }
 .textheading{
     font-size: 1em;
@@ -538,9 +564,8 @@ h4 {
     color: #aaa;
     text-decoration: none;
 }
-.side-menu li a:active {
+.side-menu .active-link {
     color:#4FC182;
-    text-decoration: none;
 }
 .side-menu li a:hover {
     color:#4FC182;

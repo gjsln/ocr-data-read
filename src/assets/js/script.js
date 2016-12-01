@@ -1,7 +1,7 @@
 function clickFileInput() {
     document.getElementById('my_file').click();
 }
-
+/*
 $('input[type=file]').change(function (e) {
 
     imageToBase64(document.getElementById('my_file').files);
@@ -54,7 +54,7 @@ function arrayBufferToBase64(buffer) {
         binary += String.fromCharCode(bytes[i]);
     }
     return window.btoa(binary);
-}
+}*/
 
 function rotateLeft() {
 
