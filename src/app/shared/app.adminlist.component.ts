@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OCRDataService } from './app.ocrDataservices';
+import { MyAdminUserList } from './app.myAdminList';
 
 @Component({
 	selector: 'adminlist',
@@ -10,18 +11,16 @@ import { OCRDataService } from './app.ocrDataservices';
 export class AdminListComponent {
 	constructor(private _OCRDataService: OCRDataService) { }
 
-	public userData: any;
+	public userData: MyAdminUserList [];
 	public userLength: any;
 
 	ngOnInit() {
-		this._OCRDataService.getUserList().subscribe(
-			// the first argument is a function which runs on success
-			data => { this.userData = data },
-			// the second argument is a function which runs on error
-			err => console.error(err),
-			// the third argument is a function which runs on completion
-			() => console.log('Done Loading user list'),
-		);
+		this._OCRDataService
+		.GetAllUserList()
+		.subscribe(
+			(data:MyAdminUserList[]) => this.userData = data,
+                error => console.log("Server Data Error: "+ error),
+                () => console.log('Sucess Data request'));
 		//this.userLength = userData.length;
 		//this.categories.filter((item, index) => index > 2 )
 	}

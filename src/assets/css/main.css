@@ -89,6 +89,10 @@ html, body{
     font-size : 0.8em;
     width:85%;
 }
+a.disabled {
+   pointer-events: none;
+   cursor: default;
+}
 .gray-scale {
     opacity: 0.2;
 }
@@ -576,4 +580,43 @@ h4 {
 .side-menu li a:hover {
     color:#4FC182;
     text-decoration: none;
+}
+.final-submit {
+    width:100%;
+    margin:15% 0;
+}
+.final-submit-content {
+    text-align: center;    
+}
+.final-submit-btns span {
+    padding: 0 1em;
+}
+.success-mark {
+    margin: 1em 0;    
+}
+.success-mark span {
+    display: block;
+}
+.sucess-mark-caption {
+    font-size: 2em;
+}
+.thanks-content {
+    font-size: 1.5em;
+    margin-bottom: 2.5em;
+}
+.thanks-content span {
+    display: block;
+    font-size: 2em;
+    color: #485DDC;
+}
+.dark-btn {
+    background-color: #333;
+    color: #fff;
+}
+.dark-btn:hover {
+    color: #fff;
+}
+.final-submit-btns .btn {
+    height: 50px;
+    width:180px;    
 }

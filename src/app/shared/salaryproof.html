@@ -178,7 +178,7 @@
 				</div>
 				<div class="actionbutton">
 					<a routerLink="/userinfo" routerLinkActive="active">
-						<button id="nextbtn" class="btn">Next</button>
+						<button id="nextbtn" class="btn" [disabled] = "!netPay">Next</button>
 					</a>
 				</div>
 			</div>
