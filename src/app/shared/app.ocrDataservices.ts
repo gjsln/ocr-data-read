@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/Rx';
 import { IdentityComponent } from './app.identity.component';
 import { MyAdminUserList } from './app.myAdminList'
 import { Configuration } from './app.constants';
@@ -18,30 +18,34 @@ export class OCRDataService {
         this.headers.append('Content-Type', 'application/json');
         this.headers.append('Accept', 'application/json');
     }
-    public GetAllUserList = (): Observable<MyAdminUserList[]> => {
+
+    GetAllUserList = (): Observable<MyAdminUserList[]> => {
         return this.http.get(this.actionUrl + 'userlist.json')
             .map((response: Response) => <MyAdminUserList[]>response.json())
             .catch(this.handleError);
     }
 
+    setImageData(data) {
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+        let body = JSON.stringify(data);
+        return this.http.post(this.actionUrl, body, headers).map((res: Response) => res.json());
+    }
+
     getIdentityInfo() {
-        return this.http.get('./app/data/identitydata.json').map((res: Response) => res.json());
+        return this.http.get(this.actionUrl + 'identitydata.json').map((res: Response) => res.json());
     }
 
     getAddressInfo() {
-        return this.http.get('./app/data/addressdata.json').map((res: Response) => res.json());
+        return this.http.get(this.actionUrl + 'addressdata.json').map((res: Response) => res.json());
     }
 
     getSalaryInfo() {
-        return this.http.get('./app/data/salarydata.json').map((res: Response) => res.json());
+        return this.http.get(this.actionUrl + 'salarydata.json').map((res: Response) => res.json());
     }
 
-    /*getUserList() {
-        return this.http.get('./app/data/userlist.json').map((res: Response) => res.json());
-    }*/
-
     getUserInfo() {
-        return this.http.get('./app/data/userinfo.json').map((res: Response) => res.json());
+        return this.http.get(this.actionUrl + 'userinfo.json').map((res: Response) => res.json());
     }
 
     private handleError(error: Response) {

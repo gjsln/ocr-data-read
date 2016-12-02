@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { OCRDataService } from './app.ocrDataservices';
+import { Observable } from 'rxjs/Rx';
 import { ModalComponent } from 'ng2-bs3-modal/ng2-bs3-modal';
 
 @Component({
@@ -14,7 +15,7 @@ export class IdentityComponent {
 
 	constructor(private _OCRDataService: OCRDataService) { }
 
-	//file_srcs: string;
+	file_srcs: string;
 	imageFile: boolean;
 
 	public fileChange(fileInput: any) {
@@ -39,6 +40,26 @@ export class IdentityComponent {
 	panNo: string;
 
 	getIdentityInfo() {
+		this.file_srcs = ($('#ocrimage').attr('src')).replace(/^data:image\/(png|jpg);base64,/, '');
+		let reqBody = {
+			"customer_id":"",
+            "document_type":"id_proof",
+			"base64_string": this.file_srcs
+		};
+		this._OCRDataService.setImageData(reqBody).subscribe(
+			data => {
+				if (this.file_srcs) {
+					this.getOcrData;
+				}
+				return true;
+			},
+			error => {
+				console.error("Error Request");
+				return Observable.throw(error);
+			}
+		);
+	}
+	getOcrData() {
 		this._OCRDataService.getIdentityInfo().subscribe(
 			data => {
 				this.fName = data.fname;
